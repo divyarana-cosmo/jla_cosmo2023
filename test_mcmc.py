@@ -50,7 +50,7 @@ ndim = 2 # number of parameters in the model
 # initializing the walkers
 p_m  = np.random.uniform(-1, 1, nwalkers)
 p_c  = np.random.uniform(4, 5.0, nwalkers)
-pos = np.transpose([p_m, p_c]) 
+pos = np.transpose([p_m, p_c]) # assigning random positions with in the priors
 
 # initializing the sampler and running the chains
 sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(x, y, icov))
