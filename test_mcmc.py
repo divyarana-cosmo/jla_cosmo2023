@@ -54,7 +54,7 @@ pos = np.transpose([p_m, p_c]) # assigning random positions with in the priors
 
 # initializing the sampler and running the chains
 sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(x, y, icov))
-sampler.run_mcmc(pos, 5000, progress=True);
+sampler.run_mcmc(pos, 5000, progress=True); # running with 5000 steps
 
 
 #discarding 1000 steps
